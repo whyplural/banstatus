@@ -3,9 +3,10 @@ setlocal enabledelayedexpansion
 
 echo This script checks the availability of all of the sites from list-banned.txt.
 :: Set current version and URLs
+echo Checking updates...
 set "GITHUB_VERSION_URL=https://raw.githubusercontent.com/whyplural/banstatus/main/version.txt"
 set "GITHUB_RELEASE_URL=https://github.com/whyplural/banstatus/releases/tag/"
-set "GITHUB_DOWNLOAD_URL=https://github.com/whyplural/banstatus/releases/download/0.1/banstatus-"
+set "GITHUB_DOWNLOAD_URL=https://github.com/whyplural/banstatus/releases/download/latest/banstatus-"
 
 :: Get the latest version from GitHub
 for /f "delims=" %%A in ('powershell -command "(Invoke-WebRequest -Uri \"%GITHUB_VERSION_URL%\" -Headers @{\"Cache-Control\"=\"no-cache\"} -TimeoutSec 5).Content.Trim()" 2^>nul') do set "GITHUB_VERSION=%%A"
