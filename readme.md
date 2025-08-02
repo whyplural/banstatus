@@ -1,4 +1,4 @@
-<div style="text-align: center;">![BanStatus icon](https://raw.githubusercontent.com/whyplural/banstatus/gui-beta/res/icon.ico)</div>
+![BanStatus icon](https://raw.githubusercontent.com/whyplural/banstatus/gui-beta/res/icon.ico)
 <center># BanStatus
 Программа для проверки доступности заблокированных и/или недоступных сайтов. Вы можете использовать её для проверки вашего VPN или DNS-сервера.</center>
 ## Использование
