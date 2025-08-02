@@ -3,9 +3,13 @@ from tkinter import messagebox, scrolledtext
 import subprocess
 import threading
 import os
+import ctypes
+
+myappid = 'whyplural.banstatus.v2.0' # arbitrary string
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 # Начальный список
-current_file = ["lists/list-banned.txt"]
+current_file = ["res/list-banned.txt"]
 stop_flag = [False]
 check_thread = [None]
 
@@ -16,12 +20,12 @@ def load_sites(filename):
         return [line.strip() for line in file if line.strip()]
 
 def toggle_file():
-    if current_file[0] == "lists/list-banned.txt":
-        current_file[0] = "lists/list-banned2.txt"
-    elif current_file[0] == "lists/list-banned2.txt":
-        current_file[0] = "lists/list-all.txt"
+    if current_file[0] == "res/list-banned.txt":
+        current_file[0] = "res/list-banned2.txt"
+    elif current_file[0] == "res/list-banned2.txt":
+        current_file[0] = "res/list-all.txt"
     else :
-        current_file[0] = "lists/list-banned.txt"
+        current_file[0] = "res/list-banned.txt"
 
     sites = load_sites(current_file[0])
     msg = f"Текущий список: {current_file[0]} — {len(sites)} сайтов"
@@ -123,6 +127,7 @@ window = tk.Tk()
 window.title("BanStatus v2.0")
 window.geometry("600x450")
 window.resizable(False, False)
+window.iconbitmap(r"res/icon.ico")
 
 title_label = tk.Label(window, text="BanStatus", font=("Arial", 12))
 title_label.pack(pady=10)
