@@ -23,4 +23,4 @@ ____
 Сайты будут добавляться.
 *Заблокированные сайты как cloudflare-ech.com, yt4.ggpht.com, googlevideo.com и т.д., могут отображаться доступными в любом случае.*
 ![GitHub Created At](https://img.shields.io/github/created-at/whyplural/banstatus) ![GitHub Release](https://img.shields.io/github/v/release/whyplural/banstatus) 
-![GitHub last commit (branch)](https://img.shields.io/github/last-commit/whyplural/banstatus/main?label=last%20main%20commit) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/whyplural/banstatus/gui-beta?label=last%20gui-beta%20commit)
+![GitHub last commit (branch)](https://img.shields.io/github/last-commit/whyplural/banstatus/main?label=last%20main%20commit)
