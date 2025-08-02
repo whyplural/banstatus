@@ -1,5 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
+set "LOCAL_VERSION=1.0.1"
 
 echo This script checks the availability of all of the sites from list-banned.txt.
 :: Set current version and URLs
