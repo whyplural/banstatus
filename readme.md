@@ -18,5 +18,7 @@ ping -n 1 nyaa.si
 ____
 Сайты будут добавляться.
 *Заблокированные сайты как cloudflare-ech.com, yt4.ggpht.com, googlevideo.com и т.д., могут отображаться доступными в любом случае.*
+*Программа НЕ даёт доступ к каким-либо заблокированным сайтам на территории РФ.*
+
 ![GitHub Created At](https://img.shields.io/github/created-at/whyplural/banstatus) ![GitHub Release](https://img.shields.io/github/v/release/whyplural/banstatus) 
 ![Static Badge](https://img.shields.io/badge/platform-windows-blue)
