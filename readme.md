@@ -1,3 +1,4 @@
+![BanStatus icon](https://raw.githubusercontent.com/whyplural/banstatus/gui-beta/res/icon.ico)
 # BanStatus
 Программа для проверки доступности заблокированных и/или недоступных сайтов. Вы можете использовать её для проверки вашего VPN или DNS-сервера.
 ## Использование
