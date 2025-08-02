@@ -1,6 +1,6 @@
-![BanStatus icon](https://raw.githubusercontent.com/whyplural/banstatus/gui-beta/res/icon.ico)
-# BanStatus
-Программа для проверки доступности заблокированных и/или недоступных сайтов. Вы можете использовать её для проверки вашего VPN или DNS-сервера.
+<div style="text-align: center;">![BanStatus icon](https://raw.githubusercontent.com/whyplural/banstatus/gui-beta/res/icon.ico)</div>
+<center># BanStatus
+Программа для проверки доступности заблокированных и/или недоступных сайтов. Вы можете использовать её для проверки вашего VPN или DNS-сервера.</center>
 ## Использование
 Запустите файл banstatus-gui.py. Чтобы проверить обновления запустите файл update.bat.
 ## Проверяемые сайты
