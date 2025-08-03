@@ -1,0 +1,36 @@
+name: Bug Report
+description: File a bug report.
+title: "[BUG]: "
+labels: ["bug", "triage"]
+projects: ["whyplural/bugstatus"]
+assignees:
+  - whyplural
+body:
+  - type: input
+    id: describe
+    attributes:
+      label: Опишите баг.
+      description: Четкое и краткое описание проблемы.
+      placeholder: 
+    validations:
+      required: true
+  - type: checkboxes
+    id: willfix
+    attributes:
+      label: Чек-лист
+      description: Убедитесь, что 
+      options:
+        - label: вы просмотрели уже известные ошибки в issues под тегом willfix и не нашли там свою проблему.
+          required: true
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Скриншоты
+      description: Приложите сюда скриншоты или видео, содержащие проблему.
+    validations:
+      required: false
+  - type: textarea
+    id: additional
+    attributes:
+      label: Дополнительная информация
+      description: Добавьте дополнительную информацию, которая может нам помочь, к примеру версию Windows. 
