@@ -20,7 +20,7 @@ body:
       label: Чек-лист
       description: Убедитесь, что 
       options:
-        - label: вы просмотрели уже известные ошибки в issues под тегом willfix и не нашли там свою проблему.
+        - label: вы просмотрели уже известные ошибки в readme.md и не нашли там свою проблему.
           required: true
   - type: textarea
     id: screenshots
