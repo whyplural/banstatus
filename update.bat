@@ -1,6 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
-set "LOCAL_VERSION=2.0"
+set "LOCAL_VERSION=2.0.1"
 
 :: Set current version and URLs
 chcp 437 > nul

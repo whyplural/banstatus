@@ -5,8 +5,8 @@ import threading
 import os
 import ctypes
 
-myappid = 'whyplural.banstatus.v2.0' # arbitrary string
-ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+appid = 'whyplural.banstatus.v2'
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(appid)
 
 # Начальный список
 current_file = ["res/list-banned.txt"]
@@ -46,6 +46,19 @@ def update():
     tk.messagebox.showinfo(title="Обновление", message="Для проверки обновлений запустите update.bat")
 
 def check_sites():
+    # Если поток работает — ждём завершения, если остановка уже запрошена
+    if check_thread[0]:
+        if check_thread[0].is_alive():
+            if not stop_flag[0]:
+                messagebox.showwarning("Предупреждение", "Проверка уже выполняется. Остановите её перед запуском новой.")
+                return
+            else:
+                # Ожидаем завершения остановленного потока
+                results_text.insert(tk.END, "⏳ Ожидание завершения предыдущей проверки...\n", "info")
+                results_text.see(tk.END)
+                check_thread[0].join()
+                check_thread[0] = None
+
     results_text.delete(1.0, tk.END)
     sites = load_sites(current_file[0])
     if not sites:
@@ -117,14 +130,15 @@ def check_sites():
             results_text.insert(tk.END, f"⚠ Ошибки: {count_error}\n", "orange")
             results_text.see(tk.END)
 
+        check_thread[0] = None  # Поток завершён
 
-    # Запускаем в отдельном потоке
     check_thread[0] = threading.Thread(target=run_check)
     check_thread[0].start()
 
+
 # GUI
 window = tk.Tk()
-window.title("BanStatus v2.0")
+window.title("BanStatus v2.0.1")
 window.geometry("600x450")
 window.resizable(False, False)
 window.iconbitmap(r"res/icon.ico")
@@ -132,7 +146,7 @@ window.iconbitmap(r"res/icon.ico")
 title_label = tk.Label(window, text="BanStatus", font=("Arial", 12))
 title_label.pack(pady=10)
 
-label = tk.Label(text="v2.0", font=("Arial", 7))
+label = tk.Label(text="v2.0.1", font=("Arial", 7))
 label.pack()
 
 button_frame = tk.Frame(window)
