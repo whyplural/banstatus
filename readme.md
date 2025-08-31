@@ -14,7 +14,6 @@ ping -n 1 nyaa.si
 ## Известные ошибки
 [Все ошибки с тегом willfix](https://github.com/whyplural/banstatus/issues?q=is%3Aissue%20state%3Aopen%20label%3Awillfix)
 ____
-Сайты будут добавляться.
 *Заблокированные сайты как cloudflare-ech.com, yt4.ggpht.com, googlevideo.com и т.д., могут отображаться доступными в любом случае.*
 *Программа НЕ даёт доступ к каким-либо заблокированным на территории РФ сайтам.*
 
